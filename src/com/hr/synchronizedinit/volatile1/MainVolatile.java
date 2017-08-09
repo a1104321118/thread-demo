@@ -8,8 +8,12 @@ public class MainVolatile {
     public static void main(String[] args) throws InterruptedException {
         Task task = new Task();
         task.setContinue(true);
-        Thread thread = new Thread(task);
-        thread.start();
+
+        Thread thread1 = new Thread(task);
+        thread1.start();
+        Thread thread2 = new Thread(task);
+        thread2.start();
+
         Thread.sleep(1000);
         task.setContinue(false);
 

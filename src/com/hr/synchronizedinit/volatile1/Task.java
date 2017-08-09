@@ -5,7 +5,7 @@ package com.hr.synchronizedinit.volatile1;
  */
 public class Task implements Runnable{
 
-    volatile private boolean isContinue;
+    private volatile boolean isContinue;
 
     public boolean isContinue() {
         return isContinue;
