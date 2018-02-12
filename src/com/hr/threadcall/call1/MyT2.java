@@ -16,6 +16,11 @@ public class MyT2 implements Runnable{
         synchronized (lock){
             System.out.println("myt2 notify");
             lock.notify();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             System.out.println("myt2 notify end");
         }
     }

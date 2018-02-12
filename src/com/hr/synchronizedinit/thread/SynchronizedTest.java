@@ -17,7 +17,7 @@ public class SynchronizedTest {
 		synchronized (a){
 
 			System.out.println(a);
-			Thread.sleep(300);
+			Thread.sleep(3000);
 			a = a + 1; //对与另外一个线程无用，因为这是方法里面的变量
 		}
 	}

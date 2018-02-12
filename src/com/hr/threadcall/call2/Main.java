@@ -12,6 +12,11 @@ public class Main {
 
         //当 notify 方法所在的同步块执行完之后，才会执行 wait 原来所在的方法块
         t1.start();
+        try {
+            Thread.sleep(1000);//确保t1 先执行
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         t2.start();
     }
 }

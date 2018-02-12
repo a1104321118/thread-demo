@@ -13,7 +13,7 @@ public class Main {
         t1.start();
         t2.start();
 
-        Thread.sleep(100);
+        Thread.sleep(10000);
         task.signalA();//分离控制，只唤醒 conditionA 的等待线程
     }
 }
